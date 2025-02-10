@@ -100,7 +100,7 @@ pip install -r requirements.txt
 python scripts/download_models.py --repo_id lmstudio-community/Llama-3.2-3B-Instruct-GGUF --model_file Llama-3.2-3B-Instruct-Q8_0.gguf
 ```
 5. **Configure environment variables:**
-Edit .env and set the TELEGRAM_BOT_TOKEN, LLM_MODEL_PATH, EMBEDDING_MODEL, and PROJECT_NAME parameters.  Get your Telegram bot token from BotFather.
+Edit .env.example (save it as .env file) and set the TELEGRAM_BOT_TOKEN, LLM_MODEL_PATH, EMBEDDING_MODEL, and PROJECT_NAME parameters.  Get your Telegram bot token from BotFather.
 6. **Prepare the Superteam member data:**
 Ensure the Superteam member data is in a JSON file (e.g., members.json) with the required format.  The structure should be suitable for querying based on skills and other criteria.  Place this file in the data directory.
 <br></br>
@@ -111,7 +111,7 @@ PYTHONPATH=. python -m src.services.telegram_service
 ```
 **Part 4: Directory Structure**
 ```bash
-superteam-vietnam-ai/
+SuperBot/
 ├── data/                  # Document and model storage
 ├── src/                   # Application code
 │   ├── api/               # FastAPI endpoints
