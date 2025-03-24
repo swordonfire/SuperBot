@@ -1,7 +1,7 @@
 # SuperBot 🤖 - AI Communication Assistant 
-An AI-powered assistant for Superteam Vietnam to streamline knowledge management, member discovery, and content generation across Telegram and Twitter, while ensuring privacy with local LLM deployment.
+An AI-powered assistant to streamline knowledge management, member discovery, and content generation across Telegram and Twitter, while ensuring privacy with local LLM deployment.
 
-This project implements an AI-powered communication assistant for Superteam Vietnam, designed to streamline content creation, management, and community interaction across Telegram and Twitter.  It leverages local Large Language Models (LLMs) for enhanced data privacy and efficient operation, even on resource-constrained devices. This MVP provides a foundation for a comprehensive AI system to empower the Superteam Vietnam team.
+This project implements an AI-powered communication assistant, designed to streamline content creation, management, and community interaction across Telegram and Twitter.  It leverages local Large Language Models (LLMs) for enhanced data privacy and efficient operation, even on resource-constrained devices. This MVP provides a foundation for a comprehensive AI system to empower organizations.
 
 ## Screenshots
 
@@ -20,24 +20,24 @@ This MVP includes the following key features:
 
 1.  **Telegram Knowledge Portal Bot:** 🧠
 
-    *   A Telegram bot acting as a central knowledge base for Superteam Vietnam.
+    *   A Telegram bot acting as a central knowledge base for the organization.
     *   Admin UI for easy document uploads to train the bot.
     *   Accurate responses, avoiding hallucinations and confidently stating "NO" when unable to provide an answer.
     *   Implemented using Retrieval-Augmented Generation (RAG) for improved accuracy and context awareness.
 
-2.  **Superteam Member Finder:** 🤝
+2.  **Member Finder:** 🤝
 
-    *   AI-powered matching of community needs with Superteam members based on a JSON database.
+    *   AI-powered matching of community needs with organization members based on a JSON database.
     *   Example query: "I want to find a RUST developer to build a DEFI project with Twitter integration."
     *   Returns the most relevant member(s) with explanations or "NO" if no match is found.
 
 3.  **Twitter Management Assistant:** 🐦
 
-    *   Integration with Superteam Vietnam's Twitter account.
+    *   Integration with organization's Twitter account.
     *   AI-driven tweet suggestions for human approval.
     *   Assistance with tweet draft iteration:
         *   Keyword suggestions.
-        *   Automatic correction of Twitter handles from the Superteam VN followed accounts list.
+        *   Automatic correction of Twitter handles from the organization's followed accounts list.
     *   Facilitates finalizing and publishing tweets.
 
 4.  **Content Advisor for Telegram and Twitter:** ✨
@@ -66,7 +66,7 @@ This MVP includes the following key features:
 *   Python 3.9+
 *   `uv` (recommended for faster dependency management) or `pip`
 *   Access to a Telegram bot token
-*   Superteam Vietnam member data in JSON format
+*   Organization's member data in JSON format
 
 ### Installation
 
@@ -101,8 +101,8 @@ python scripts/download_models.py --repo_id lmstudio-community/Llama-3.2-3B-Inst
 ```
 5. **Configure environment variables:**
 Edit .env.example (save it as .env file) and set the TELEGRAM_BOT_TOKEN, LLM_MODEL_PATH, EMBEDDING_MODEL, and PROJECT_NAME parameters.  Get your Telegram bot token from BotFather.
-6. **Prepare the Superteam member data:**
-Ensure the Superteam member data is in a JSON file (e.g., members.json) with the required format.  The structure should be suitable for querying based on skills and other criteria.  Place this file in the data directory.
+6. **Prepare the member data:**
+Ensure the member data is in a JSON file (e.g., members.json) with the required format.  The structure should be suitable for querying based on skills and other criteria.  Place this file in the data directory.
 <br></br>
 
 **Running the Telegram Bot**
